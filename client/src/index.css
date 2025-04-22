@@ -1,0 +1,158 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 20 14.3% 4.1%;
+  --muted: 60 4.8% 95.9%;
+  --muted-foreground: 25 5.3% 44.7%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 20 14.3% 4.1%;
+  --card: 0 0% 100%;
+  --card-foreground: 20 14.3% 4.1%;
+  --border: 20 5.9% 90%;
+  --input: 20 5.9% 90%;
+  --primary: 227 71% 45%;
+  --primary-foreground: 60 9.1% 97.8%;
+  --secondary: 60 4.8% 95.9%;
+  --secondary-foreground: 24 9.8% 10%;
+  --accent: 191 91% 37%;
+  --accent-foreground: 60 9.1% 97.8%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 60 9.1% 97.8%;
+  --ring: 24 5.4% 63.9%;
+  --radius: 0.5rem;
+  
+  --chart-1: 227 71% 45%;
+  --chart-2: 0 84.2% 60.2%;
+  --chart-3: 191 91% 37%;
+  --chart-4: 142 76% 36%;
+  --chart-5: 48 96% 53%;
+  
+  --sidebar-background: 227 71% 45%;
+  --sidebar-foreground: 0 0% 100%;
+  --sidebar-primary: 227 60% 30%;
+  --sidebar-primary-foreground: 0 0% 100%;
+  --sidebar-accent: 227 60% 65%;
+  --sidebar-accent-foreground: 0 0% 100%;
+  --sidebar-border: 227 39% 55%;
+  --sidebar-ring: 0 0% 100%;
+}
+
+.dark {
+  --background: 240 10% 3.9%;
+  --foreground: 0 0% 98%;
+  --muted: 240 3.7% 15.9%;
+  --muted-foreground: 240 5% 64.9%;
+  --popover: 240 10% 3.9%;
+  --popover-foreground: 0 0% 98%;
+  --card: 240 10% 3.9%;
+  --card-foreground: 0 0% 98%;
+  --border: 240 3.7% 15.9%;
+  --input: 240 3.7% 15.9%;
+  --primary: 227 71% 45%;
+  --primary-foreground: 0 0% 98%;
+  --secondary: 240 3.7% 15.9%;
+  --secondary-foreground: 0 0% 98%;
+  --accent: 191 91% 37%;
+  --accent-foreground: 0 0% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+  --ring: 240 4.9% 83.9%;
+  --radius: 0.5rem;
+  
+  --chart-1: 227 71% 60%;
+  --chart-2: 0 84.2% 70%;
+  --chart-3: 191 91% 50%;
+  --chart-4: 142 76% 45%;
+  --chart-5: 48 96% 65%;
+  
+  --sidebar-background: 227 71% 45%;
+  --sidebar-foreground: 0 0% 100%;
+  --sidebar-primary: 227 60% 30%;
+  --sidebar-primary-foreground: 0 0% 100%;
+  --sidebar-accent: 227 60% 65%;
+  --sidebar-accent-foreground: 0 0% 100%;
+  --sidebar-border: 227 39% 55%;
+  --sidebar-ring: 0 0% 100%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-gray-100 text-foreground;
+  }
+}
+
+/* Custom styles for the application */
+.sidebar-link {
+  @apply flex items-center px-4 py-3 text-white hover:bg-primary-600 transition-colors duration-150;
+}
+
+.sidebar-link.active {
+  @apply bg-primary-600;
+}
+
+.sidebar-icon {
+  @apply h-5 w-5 mr-3;
+}
+
+.status-card {
+  @apply flex items-center px-5 py-6 shadow-sm rounded-md bg-white;
+}
+
+.status-card-icon-container {
+  @apply p-3 rounded-full bg-opacity-75;
+}
+
+.method-badge {
+  @apply px-2 inline-flex text-xs leading-5 font-semibold rounded-full;
+}
+
+.method-badge.get {
+  @apply bg-purple-100 text-purple-800;
+}
+
+.method-badge.post {
+  @apply bg-blue-100 text-blue-800;
+}
+
+.method-badge.put {
+  @apply bg-yellow-100 text-yellow-800;
+}
+
+.method-badge.delete {
+  @apply bg-red-100 text-red-800;
+}
+
+.auth-badge {
+  @apply px-2 inline-flex text-xs leading-5 font-semibold rounded-full;
+}
+
+.auth-badge.oauth2 {
+  @apply bg-green-100 text-green-800;
+}
+
+.auth-badge.public {
+  @apply bg-yellow-100 text-yellow-800;
+}
+
+.status-badge {
+  @apply px-2 inline-flex text-xs leading-5 font-semibold rounded-full;
+}
+
+.status-badge.active {
+  @apply bg-green-100 text-green-800;
+}
+
+.status-badge.pending {
+  @apply bg-yellow-100 text-yellow-800;
+}
+
+.status-badge.inactive {
+  @apply bg-red-100 text-red-800;
+}
